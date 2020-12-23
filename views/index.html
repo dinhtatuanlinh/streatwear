@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="menusidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li>
+                    Jewelry
+                    <ul>
+                        <li><a href="">Necklaces</a></li>
+                        <li><a href="">Bracelets</a></li>
+                        <li><a href="">Rings</a></li>
+                        <li><a href="">Earrings</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Clothing</a>
+                    <ul>
+                        <li><a href="">All clothing</a></li>
+                        <li><a href="">Sweatshirts</a></li>
+                        <li><a href="">T-shirts</a></li>
+                        <li><a href="">Hats</a></li>
+                        <li><a href="">Bag boy capsule 1</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="">Blackout capsule</a></li>
+                <li><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="notif">FREE U.S. SHIPPING ON ALL JEWELRY ORDERS</div>
+    <div id="background">
+        <div class="w3-display-container">
+            <img class="imgbackground w3-hide-small w3-hide-medium desktopslider" src="imgs/wp2153682.jpg" alt="bg">
+            <img class="imgbackground w3-hide-small w3-hide-medium desktopslider" src="imgs/wp2000035.jpg" alt="bg">
+
+            <img class="imgbackground w3-hide-large mobileslider" src="imgs/wp2153682-mb.jpg" alt="bg">
+            <img class="imgbackground w3-hide-large mobileslider" src="imgs/1cfe9f7aa5021b08c163dd2390d38d71.jpg" alt="bg">
+
+            <button class="w3-button w3-white w3-display-left w3-hide-small w3-hide-medium" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right w3-hide-small w3-hide-medium" onclick="plusDivs(1)">&#10095;</button>
+            <button class="w3-button w3-white w3-display-left w3-hide-large" onclick="mb_plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-white w3-display-right w3-hide-large" onclick="mb_plusDivs(1)">&#10095;</button>
+        </div>
+
+        <div id="top" class="w3-hide-small w3-hide-medium">
+            <div id="logo"><img src="imgs/Chrome_Logo_2_200x.webp" alt="logo"></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+
+                        <a href="category.html">Jewelry</a>
+                        <ul>
+                            <li><a href="">Necklaces</a></li>
+                            <li><a href="">Bracelets</a></li>
+                            <li><a href="">Rings</a></li>
+                            <li><a href="">Earrings</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="category.html">Clothing</a>
+                        <ul>
+                            <li><a href="">All clothing</a></li>
+                            <li><a href="">Sweatshirts</a></li>
+                            <li><a href="">T-shirts</a></li>
+                            <li><a href="">Hats</a></li>
+                            <li><a href="">Bag boy capsule 1</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="">Blackout capsule</a></li>
+                    <li><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <hr />
+                </ul>
+            </nav>
+        </div>
+        <div id="mobile-top" class="w3-hide-large">
+            <div id="mobile-nav" onclick="w3_open()"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div id="mobile-logo">
+                <a href=""><img src="imgs/Chrome_Logo_2_200x.webp" alt="logo"></a>
+            </div>
+            <div id="mobile-search"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></div>
+        </div>
+
+    </div>
+    <div id="necklaces">
+        <div class="sectionTop">
+            <div class="title">OUR TOP GIFT PICKS 🎁 </div>
+            <div class="des">We curated our best pieces, you can take all the credit. 😏 </div>
+        </div>
+        <div class="wrapper">
+            <div class="w3-row-padding">
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w3-col s6 m4 l4">
+                    <a href="detail.html">
+                        <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                        <div class="infowrapper">
+                            <div class="name">Cupid's Revenge</div>
+                            <div class="price">$44.95</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="clothes">
+        <img src="imgs/Black-Grunge-Background-2.jpg" alt="clothes" class="w3-hide-small w3-hide-medium">
+        <img src="imgs/Black-Grunge-Background-2.jpg" alt="clothes" class="w3-hide-large">
+    </div>
+    <div id="clothesslider">
+        <div class="slidercontainer">
+            <ul id="slidewrapper">
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="imgs/cupids-revenge-947_750x.webp" alt="cupid's revenge">
+                    <div class="infowrapper">
+                        <div class="name">Cupid's Revenge</div>
+                        <div class="price">$44.95</div>
+                    </div>
+                </li>
+            </ul>
+            <button id="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button id="next"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </button>
+
+        </div>
+    </div>
+    <div id="gifts">
+        <div class="w3-row-padding">
+            <div class="info w3-col s12 m6 l6">
+                <div class="infowrapper">
+                    <div class="title">BAG BOY HYBRIDS</div>
+                    <div class="des">We remade some of our most hyped pieces with a Bag Boy twist. Secure yours now before they're gone.</div>
+                    <button>shop now</button>
+                </div>
+
+            </div>
+            <div class="imgs w3-col s12 m6 l6">
+                <img src="imgs/bag-boy-556_cb59fb09-df4f-4f77-b545-a85a220a0abc_360x.webp" alt="">
+                <img src="imgs/graduation-bag-boy-959_d81ac870-fffd-4e02-ac9d-25027c5f9747_360x.webp" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div id="categories">
+        <div class="wrapper">
+            <div class="w3-row-padding">
+                <div class="catitems w3-col s6 m3 l3">
+                    <img src="imgs/Screen_Shot_2020-05-03_at_5.03.59_PM_360x.webp" alt="bracelets">
+                    <div class="catname">bracelets</div>
+
+                </div>
+                <div class="catitems w3-col s6 m3 l3">
+                    <img src="imgs/Screen_Shot_2020-05-03_at_5.09.44_PM_360x.webp" alt="earrings">
+                    <div class="catname">earrings</div>
+
+                </div>
+                <div class="catitems w3-col s6 m3 l3">
+                    <img src="imgs/Screen_Shot_2020-05-03_at_5.08.25_PM_360x.webp" alt="rings">
+                    <div class="catname">rings</div>
+
+                </div>
+                <div class="catitems w3-col s6 m3 l3">
+                    <img src="imgs/bag-boy-330_360x.webp" alt="all products">
+                    <div class="catname">all products</div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div id="quality">
+        <img src="imgs/DSC00382_1728x.webp" alt="quality">
+        <div class="content contentdesktop w3-hide-small">
+            <div class="contenttop">Quality you can trust</div>
+            <div class="contenttitle">That's the Thryfty difference.</div>
+            <p>We know there's a lot of other options for jewelry, but we're not like the other guys. If you want quality, you've come to the right place. 😏</p>
+            <p>If you want cheap base metals that'll leave your skin itchy and green... try the other guys. 🤷🏻‍♂️</p>
+            <button>read our story</button>
+        </div>
+        <div class="content2 w3-hide-medium w3-hide-large">
+            <div class="contenttop">Quality you can trust</div>
+            <div class="contenttitle">That's the Thryfty difference.</div>
+            <p>We know there's a lot of other options for jewelry, but we're not like the other guys. If you want quality, you've come to the right place. 😏</p>
+            <p>If you want cheap base metals that'll leave your skin itchy and green... try the other guys. 🤷🏻‍♂️</p>
+            <button>read our story</button>
+        </div>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="w3-row">
+                <div class="w3-col s12 m3 l3 brand">
+                    <img src="imgs/Chrome_Logo_2_200x.webp" alt="">
+                    <div>Prices shown in
+                        <select name="currency" id="">
+                            <option value="vietnamdong">VN</option>
+                            <option value="USdollar">US</option>
+                            <option value="Won">KR</option>
+                        </select>
+                    </div>
+                    <div class="social">
+                        <span><i class="fa fa-instagram" aria-hidden="true"></i>
+                        </span><span><i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="w3-col s12 m3 l3 help">
+                    <div class="footertitle">Help</div>
+                    <ul>
+                        <li><a href="">FAQ</a> </li>
+                        <li><a href="">Track Your Order</a></li>
+                        <li><a href="">Shipping Info</a></li>
+                        <li><a href="">International Shipping Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="w3-col s12 m3 l3 stayconnected">
+                    <div class="footertitle">Stay Connected</div>
+                    <ul>
+                        <li><a href="">Newsletter</a> </li>
+                        <li><a href="">Social Media</a></li>
+                        <li><a href="">Thryfty: Unchained Podcast</a></li>
+                    </ul>
+                </div>
+                <div class="w3-col s12 m3 l3 diff">
+                    <div class="footertitle">The Thryfty Difference</div>
+                    <ul>
+                        <li><a href="">Our Story</a> </li>
+                        <li><a href="">The Blog</a></li>
+                    </ul>
+                    <div class="footertitle">Work with Us</div>
+                    <ul>
+                        <li><a href="">Influencers</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

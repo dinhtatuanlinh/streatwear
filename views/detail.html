@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="menusidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li>
+                    Jewelry
+                    <ul>
+                        <li><a href="">Necklaces</a></li>
+                        <li><a href="">Bracelets</a></li>
+                        <li><a href="">Rings</a></li>
+                        <li><a href="">Earrings</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">Clothing</a>
+                    <ul>
+                        <li><a href="">All clothing</a></li>
+                        <li><a href="">Sweatshirts</a></li>
+                        <li><a href="">T-shirts</a></li>
+                        <li><a href="">Hats</a></li>
+                        <li><a href="">Bag boy capsule 1</a></li>
+                    </ul>
+
+                </li>
+                <li><a href="">Blackout capsule</a></li>
+                <li><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="notif">FREE U.S. SHIPPING ON ALL JEWELRY ORDERS</div>
+    <div id="background">
+        <div id="top" class="w3-hide-small w3-hide-medium">
+            <div id="logo">
+                <a href="index.html"><img src="imgs/Chrome_Logo_2_200x.webp" alt="logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="category.html">Jewelry</a>
+                        <ul>
+                            <li><a href="">Necklaces</a></li>
+                            <li><a href="">Bracelets</a></li>
+                            <li><a href="">Rings</a></li>
+                            <li><a href="">Earrings</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="category.html">Clothing</a>
+                        <ul>
+                            <li><a href="">All clothing</a></li>
+                            <li><a href="">Sweatshirts</a></li>
+                            <li><a href="">T-shirts</a></li>
+                            <li><a href="">Hats</a></li>
+                            <li><a href="">Bag boy capsule 1</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="">Blackout capsule</a></li>
+                    <li><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                    <hr />
+                </ul>
+            </nav>
+        </div>
+        <div id="mobile-top" class="w3-hide-large">
+            <div id="mobile-nav" onclick="w3_open()"><i class="fa fa-bars" aria-hidden="true"></i></div>
+            <div id="mobile-logo">
+                <a href=""><img src="imgs/Chrome_Logo_2_200x.webp" alt="logo"></a>
+            </div>
+            <div id="mobile-search"><a href=""><i class="fa fa-search" aria-hidden="true"></i></a></div>
+        </div>
+
+    </div>
+    <div id="detail">
+        <div class="productwrapper">
+            <div class="thumbnail w3-hide-small">
+                <a href=""><img src="imgs/blimp-458_750x.webp" alt=""></a>
+                <a href=""><img src="imgs/blimp-448_750x.webp" alt=""></a>
+                <a href=""><img src="imgs/blimp-silver-945_750x.webp" alt=""></a>
+                <a href=""><img src="imgs/blimp-891_750x.webp" alt=""></a>
+                <a href=""><img src="imgs/blimp-385_750x.webp" alt=""></a>
+                <a href=""><img src="imgs/blimp-135_750x.webp" alt=""></a>
+            </div>
+
+            <div class="maindetail">
+                <div class="pictures">
+                    <img src="imgs/blimp-458_750x.webp" alt="">
+                    <img src="imgs/blimp-448_750x.webp" alt="">
+                    <img src="imgs/blimp-silver-945_750x.webp" alt="">
+                    <img src="imgs/blimp-891_750x.webp" alt="">
+                    <img src="imgs/blimp-385_750x.webp" alt="">
+                    <img src="imgs/blimp-135_750x.webp" alt="">
+                </div>
+                <div class="description">
+                    <h1>Blimp</h1>
+                    <div class="review">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>171 reviews</span>
+                    </div>
+                    <div class="price">
+                        $44.95
+                    </div>
+                    <fieldset>
+                        <legend>choose your finish: </legend>
+                        <div class="whitebox"></div>
+                        <div class="yellowbox"></div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>choose your chain: </legend>
+                        <div class="chainbox">
+                            <span>Size</span>
+                            <select name="size" id="size">
+                                <option value="20-22">20-22"</option>
+                                <option value="22-24">22-24"</option>
+                                <option value="18">18"</option>
+                            </select>
+                            <span>Style</span>
+                            <select name="style" id="style">
+                                <option value="curb">Curb</option>
+                                <option value="figaro">Figaro</option>
+                                <option value="snake">Snake</option>
+                                <option value="3.0mmrope">3.0mm Rope</option>
+                                <option value="5.2mmcurb">5.2mm Curb</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <button class="addtocart">add to cart</button>
+                    <div class="tabs">
+                        <div class="titletabs"><span>Desciption</span><i class="fa fa-chevron-up" aria-hidden="true" style="display: none;"></i><i class="fa fa-chevron-down" aria-hidden="true" style="display: block;"></i></div>
+                        <div class="contenttabs">
+                            <h3>Product Detail:</h3>
+                            <ul>
+                                <li>Pendant size: 1.3" x .5"</li>
+                                <li>Materials: Stainless Steel, 18K Gold</li>
+                                <li>Pictured on 20" rope chain</li>
+                                <li>Made exclusively by Thryfty</li>
+                                <li>Will never fade or change colors</li>
+                                <li>Ships within 48 hours from the U.S.</li>
+                                <li>Lifetime Warranty</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <div class="titletabs"><span>Chain Style</span><i class="fa fa-chevron-up" aria-hidden="true" style="display: none;"></i><i class="fa fa-chevron-down" aria-hidden="true" style="display: block;"></i></div>
+                        <div class="contenttabs">
+                            <img src="imgs/Screen_Shot_2020-11-18_at_3.51.56_AM_2048x2048.webp" alt="">
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <div class="titletabs"><span>Shipping Info</span><i class="fa fa-chevron-up" aria-hidden="true" style="display: none;"></i><i class="fa fa-chevron-down" aria-hidden="true" style="display: block;"></i></div>
+                        <div class="contenttabs">
+                            <p style="text-align: center;"><strong>Please note:</strong> Due to the current COVID-19 pandemic, delivery speeds have varied much more than usual. We have experienced very inconsistent service recently from our shipping carrier, USPS. Therefore, some of
+                                the time estimates below may not&nbsp;be accurate at this time.</p>
+                            <p style="text-align: center;">All orders are shipped out within 48 hours from our warehouse located in Michigan, USA.&nbsp;</p>
+                            <p><span style="text-decoration: underline;">U.S. orders</span></p>
+                            <p>Typically deliver 2-5 days after leaving our warehouse. Shipping is FREE to the United States on all jewelry and light clothing items.</p>
+                            <p>Heavy items such as sweatshirts are subject to a mandatory shipping upgrade at an additional cost and will deliver in 1-3 days.</p>
+                            <p><span style="text-decoration: underline;">International orders</span></p>
+                            <p>Typically deliver in 1-3 weeks after leaving our warehouse. This range varies by country, with the shortest delivery times being to countries closest to the United States, such as Canada. Shipping is $9.95 USD or FREE if you
+                                spend over $50 USD.</p>
+                            <p>Heavy items such as sweatshirts are subject to a mandatory shipping upgrade at an additional cost and are excluded from the Free Shipping policy.</p>
+                            <meta charset="utf-8">
+                            <p><span>All international orders are subject to local customs fees and are your responsibility to pay. Please check your country's customs website for more information on how customs fees are accessed. We cannot change a package's value and are not responsible for any fees incurred. Packages returned due to failure to pay will be refunded minus a shipping and 15% restocking fee.</span></p>
+                            <p style="text-align: center;">If you have any further questions, please contact <strong>support@shopthryfty.com&nbsp;</strong>and we'll get back to you in a timely manner.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="comment">
+        <div class="starpercent">
+            <title>Verified Customer Reviews</title>
+            <div class="ratebox">
+                <div>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <p>Based on 171 reviews</p>
+                </div>
+                <div>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>96% (164)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>4% (6)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>1% (1)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>0% (0)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>0% (0)</span>
+                    </p>
+                </div>
+            </div>
+            <div class="commentrecent">Most Recent</div>
+        </div>
+        <div class="comments">
+            <div class="topcomment">
+                <div class="ava"></div>
+                <div class="rateuser">
+                    <div class="rate">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <div class="user"></div><span>(Upper Marlboro, MD)</span>
+                </div>
+
+            </div>
+            <div class="maincomment">
+                <div class="short">Great</div>
+                <p>It took about a week for me to get my piece but it was well worth it when it arrived. I like how it looks on me. Can’t wait order another one. This is a great first chain.</p>
+                <div class="imgcomment">
+                    <img src="imgs/1606779978__BAE66ED9-3FDF-43D1-A54B-FFEF4C8850DC__original.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <ul class="pagination">
+            <li><span class="button disabled">Prev</span></li>
+            <li><a href="#" class="page active">1</a></li>
+            <li><a href="#" class="page">2</a></li>
+            <li><a href="#" class="page">3</a></li>
+            <li><span>&hellip;</span></li>
+            <li><a href="#" class="page">8</a></li>
+            <li><a href="#" class="page">9</a></li>
+            <li><a href="#" class="page">10</a></li>
+            <li><a href="#" class="button">Next</a></li>
+        </ul>
+    </div>
+    <footer>
+        <div class="wrapper">
+            <div class="w3-row">
+                <div class="w3-col s12 m3 l3 brand">
+                    <img src="imgs/Chrome_Logo_2_200x.webp" alt="">
+                    <div>Prices shown in
+                        <select name="currency" id="">
+                            <option value="vietnamdong">VN</option>
+                            <option value="USdollar">US</option>
+                            <option value="Won">KR</option>
+                        </select>
+                    </div>
+                    <div class="social">
+                        <span><i class="fa fa-instagram" aria-hidden="true"></i>
+                        </span><span><i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="w3-col s12 m3 l3 help">
+                    <div class="footertitle">Help</div>
+                    <ul>
+                        <li><a href="">FAQ</a> </li>
+                        <li><a href="">Track Your Order</a></li>
+                        <li><a href="">Shipping Info</a></li>
+                        <li><a href="">International Shipping Policy</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="w3-col s12 m3 l3 stayconnected">
+                    <div class="footertitle">Stay Connected</div>
+                    <ul>
+                        <li><a href="">Newsletter</a> </li>
+                        <li><a href="">Social Media</a></li>
+                        <li><a href="">Thryfty: Unchained Podcast</a></li>
+                    </ul>
+                </div>
+                <div class="w3-col s12 m3 l3 diff">
+                    <div class="footertitle">The Thryfty Difference</div>
+                    <ul>
+                        <li><a href="">Our Story</a> </li>
+                        <li><a href="">The Blog</a></li>
+                    </ul>
+                    <div class="footertitle">Work with Us</div>
+                    <ul>
+                        <li><a href="">Influencers</a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/sticky.js"></script>
+    <script src="js/main.js"></script>
+</body>
