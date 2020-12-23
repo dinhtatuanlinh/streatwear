@@ -10,18 +10,18 @@ var removesticky = pictures.offsetTop + pictures.offsetHeight - windowheight;
 
 window.onscroll = () => {
     // && window.pageYOffset <= removesticky
-    if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - thumbnail.offsetHeight) {
+    if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - thumbnail.offsetHeight - 50) {
         thumbnail.classList.add("sticky");
         thumbnail.classList.remove("reverse");
     } else {
         thumbnail.classList.remove("sticky");
         thumbnail.classList.add("reverse");
     }
-    if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - description.offsetHeight) {
-        description.classList.add("sticky");
-        // description.classList.remove("reverse");
-    } else {
-        description.classList.remove("sticky");
-        // description.classList.add("reverse");
-    }
+    // if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - description.offsetHeight) {
+    //     description.classList.add("sticky");
+    //     // description.classList.remove("reverse");
+    // } else {
+    //     description.classList.remove("sticky");
+    //     // description.classList.add("reverse");
+    // }
 }

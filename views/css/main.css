@@ -542,13 +542,18 @@
         margin: 0 auto;
     }
     
-    #detail .productwrapper .thumbnail {
-        display: flex;
-        flex-direction: column;
-        margin-right: 20px
+    #detail .productwrapper .thumbnailwrapper {
+        margin-right: 20px;
+        width: 76px;
+        box-sizing: border-box;
     }
     
-    #detail .productwrapper .thumbnail img {
+    #detail .productwrapper .thumbnailwrapper .thumbnail {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #detail .productwrapper .thumbnailwrapper .thumbnail img {
         height: 76px;
         width: 76px;
         margin-bottom: 10px;
@@ -667,5 +672,9 @@
     }
     
     .reverse {
+        align-items: flex-end;
+    }
+    
+    .reverse-self {
         align-self: flex-end;
     }
