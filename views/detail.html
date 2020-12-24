@@ -347,66 +347,8 @@
         </div>
     </footer>
     <script src="js/jquery-3.5.1.min"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sticksy@latest/dist/sticksy.min.js"></script>
-    <script src="js/sticky.js"></script>
+    <script src="js/swiped-events.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/swiped-events-master/src/swiped-events.js"></script>
-    <script>
-        var pictures = document.getElementsByClassName("pictures")[0];
-        var slideIndex = 1;
-        var mobileslider = "mobileslider";
-        document.addEventListener('swiped-left', () => {
-
-            slideIndex -= 1;
-            var i;
-            var x = document.getElementsByClassName(mobileslider);
-            if (slideIndex > x.length) {
-                slideIndex = 1;
-            }
-            if (slideIndex < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        });
-        document.addEventListener('swiped-right', () => {
-
-            slideIndex += 1;
-            var i;
-            var x = document.getElementsByClassName(mobileslider);
-            if (slideIndex > x.length) {
-                slideIndex = 1;
-            }
-            if (slideIndex < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-        });
-        showDivs(slideIndex, mobileslider);
-
-        function mb_plusDivs(n) {
-            showDivs(slideIndex += n, mobileslider);
-        }
-
-        function showDivs(n, classvar) {
-            var i;
-            var x = document.getElementsByClassName(classvar);
-            if (n > x.length) {
-                slideIndex = 1;
-            }
-            if (n < 1) {
-                slideIndex = x.length
-            }
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-
-        }
-    </script>
+    <script src="js/sticky.js"></script>
+    <script src="js/slider.js"></script>
 </body>
