@@ -4,6 +4,38 @@ var mobileslider = "mobileslider";
 var desktopslider = "desktopslider";
 showDivs(slideIndex, mobileslider);
 showDivs(slideIndex, desktopslider);
+document.addEventListener('swiped-left', () => {
+
+    slideIndex -= 1;
+    var i;
+    var x = document.getElementsByClassName(mobileslider);
+    if (slideIndex > x.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+});
+document.addEventListener('swiped-right', () => {
+
+    slideIndex += 1;
+    var i;
+    var x = document.getElementsByClassName(mobileslider);
+    if (slideIndex > x.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+});
 
 function plusDivs(n) {
     showDivs(slideIndex += n, desktopslider);

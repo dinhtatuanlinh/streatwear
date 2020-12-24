@@ -585,6 +585,7 @@ footer li a {
 }
 
 #detail .productwrapper .maindetail .pictures {
+    min-width: 355px;
     flex: 1;
 }
 
@@ -597,6 +598,7 @@ footer li a {
     color: #fff;
     padding: 10px;
     flex: 1;
+    min-width: 355px;
 }
 
 #detail .productwrapper .maindetail .description h1 {
@@ -691,4 +693,81 @@ footer li a {
 
 .reverse {
     align-self: flex-end;
+}
+
+#comment .starpercent .commenttitle {
+    font-size: 33px;
+    text-transform: capitalize;
+    font-weight: 700;
+    color: #fff;
+}
+
+#comment .starpercent .ratebox {
+    display: flex;
+    color: #F68C00;
+}
+
+#comment .starpercent .ratebox div {
+    padding-right: 30px;
+    border-right: 1px solid #fff;
+    margin-left: 10px;
+}
+
+#comment .starpercent .ratebox div p {
+    margin: 0;
+}
+
+#comment .starpercent .ratebox div span {
+    color: #fff;
+}
+
+#comment .starpercent .ratebox div:nth-child(1) span {
+    display: block;
+}
+
+#comment .comments {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+}
+
+#comment .comments .topcomment {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#comment .comments .topcomment>div {
+    padding-right: 20px;
+}
+
+#comment .comments .topcomment .ava img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%
+}
+
+#comment .comments .topcomment .rateuser .rate {
+    color: #F68C00;
+}
+
+#comment .comments .topcomment .rateuser span {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#comment .comments .maincomment .short {
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#comment .comments .maincomment p {
+    color: #fff;
+    font-size: 18px;
+}
+
+#comment .comments .maincomment .imgcomment img {
+    width: 160px;
 }

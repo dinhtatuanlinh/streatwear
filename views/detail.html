@@ -92,8 +92,8 @@
     </div>
     <div id="detail">
         <div class="productwrapper">
-            <div class="thumbnailwrapper">
-                <div class="thumbnail w3-hide-small">
+            <div class="thumbnailwrapper w3-hide-small">
+                <div class="thumbnail">
                     <a href="#img-1"><img src="imgs/blimp-458_750x.webp" alt=""></a>
                     <a href="#img-2"><img src="imgs/blimp-448_750x.webp" alt=""></a>
                     <a href="#img-3"><img src="imgs/blimp-silver-945_750x.webp" alt=""></a>
@@ -104,12 +104,21 @@
             </div>
             <div class="maindetail">
                 <div class="pictures">
-                    <img id="img-1" src="imgs/blimp-458_750x.webp" alt="">
-                    <img id="img-2" src="imgs/blimp-448_750x.webp" alt="">
-                    <img id="img-3" src="imgs/blimp-silver-945_750x.webp" alt="">
-                    <img id="img-4" src="imgs/blimp-891_750x.webp" alt="">
-                    <img id="img-5" src="imgs/blimp-385_750x.webp" alt="">
-                    <img id="img-6" src="imgs/blimp-135_750x.webp" alt="">
+                    <img id="img-1" class="w3-hide-small" src="imgs/blimp-458_750x.webp" alt="">
+                    <img id="img-2" class="w3-hide-small" src="imgs/blimp-448_750x.webp" alt="">
+                    <img id="img-3" class="w3-hide-small" src="imgs/blimp-silver-945_750x.webp" alt="">
+                    <img id="img-4" class="w3-hide-small" src="imgs/blimp-891_750x.webp" alt="">
+                    <img id="img-5" class="w3-hide-small" src="imgs/blimp-385_750x.webp" alt="">
+                    <img id="img-6" class="w3-hide-small" src="imgs/blimp-135_750x.webp" alt="">
+
+                    <img id="img-1" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-458_750x.webp" alt="">
+                    <img id="img-2" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-448_750x.webp" alt="">
+                    <img id="img-3" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-silver-945_750x.webp" alt="">
+                    <img id="img-4" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-891_750x.webp" alt="">
+                    <img id="img-5" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-385_750x.webp" alt="">
+                    <img id="img-6" class="mobileslider w3-hide-large w3-hide-medium" src="imgs/blimp-135_750x.webp" alt="">
+                    <button class="w3-button w3-white w3-display-left w3-hide-large w3-hide-medium" onclick="mb_plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button w3-white w3-display-right w3-hide-large w3-hide-medium" onclick="mb_plusDivs(1)">&#10095;</button>
                 </div>
                 <div class="description">
                     <h1>Blimp</h1>
@@ -195,7 +204,7 @@
     </div>
     <div id="comment">
         <div class="starpercent">
-            <title>Verified Customer Reviews</title>
+            <div class="commenttitle">Verified Customer Reviews</div>
             <div class="ratebox">
                 <div>
                     <i class="fa fa-star" aria-hidden="true"></i>
@@ -203,7 +212,7 @@
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
                     <i class="fa fa-star" aria-hidden="true"></i>
-                    <p>Based on 171 reviews</p>
+                    <span>Based on 171 reviews</span>
                 </div>
                 <div>
                     <p>
@@ -252,7 +261,7 @@
         </div>
         <div class="comments">
             <div class="topcomment">
-                <div class="ava"></div>
+                <div class="ava"><img src="imgs/NoProfileLarge.png" alt="avatar"></div>
                 <div class="rateuser">
                     <div class="rate">
                         <i class="fa fa-star" aria-hidden="true"></i>
@@ -261,7 +270,7 @@
                         <i class="fa fa-star" aria-hidden="true"></i>
                         <i class="fa fa-star" aria-hidden="true"></i>
                     </div>
-                    <div class="user"></div><span>(Upper Marlboro, MD)</span>
+                    <span>Tuna</span>
                 </div>
 
             </div>
@@ -341,4 +350,63 @@
     <script src="https://cdn.jsdelivr.net/npm/sticksy@latest/dist/sticksy.min.js"></script>
     <script src="js/sticky.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/swiped-events-master/src/swiped-events.js"></script>
+    <script>
+        var pictures = document.getElementsByClassName("pictures")[0];
+        var slideIndex = 1;
+        var mobileslider = "mobileslider";
+        document.addEventListener('swiped-left', () => {
+
+            slideIndex -= 1;
+            var i;
+            var x = document.getElementsByClassName(mobileslider);
+            if (slideIndex > x.length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        });
+        document.addEventListener('swiped-right', () => {
+
+            slideIndex += 1;
+            var i;
+            var x = document.getElementsByClassName(mobileslider);
+            if (slideIndex > x.length) {
+                slideIndex = 1;
+            }
+            if (slideIndex < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        });
+        showDivs(slideIndex, mobileslider);
+
+        function mb_plusDivs(n) {
+            showDivs(slideIndex += n, mobileslider);
+        }
+
+        function showDivs(n, classvar) {
+            var i;
+            var x = document.getElementsByClassName(classvar);
+            if (n > x.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = x.length
+            }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+
+        }
+    </script>
 </body>
