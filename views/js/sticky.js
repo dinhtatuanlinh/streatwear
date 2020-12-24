@@ -5,6 +5,7 @@ var windowheight = window.innerHeight;
 var sticky = detail.offsetTop;
 var description = document.getElementsByClassName("description")[0];
 var thumbnail = document.getElementsByClassName("thumbnail")[0];
+var thumbnailwrapper = document.getElementsByClassName("thumbnailwrapper")[0];
 var removesticky = pictures.offsetTop + pictures.offsetHeight - windowheight;
 // console.log(comment.offsetTop);
 
@@ -12,10 +13,13 @@ window.onscroll = () => {
     // && window.pageYOffset <= removesticky
     if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - thumbnail.offsetHeight - 50) {
         thumbnail.classList.add("sticky");
-        thumbnail.classList.remove("reverse");
+        thumbnailwrapper.classList.remove("reverse");
+    } else if (window.pageYOffset < sticky) {
+        thumbnailwrapper.classList.remove("reverse");
+        thumbnail.classList.remove("sticky");
     } else {
         thumbnail.classList.remove("sticky");
-        thumbnail.classList.add("reverse");
+        thumbnailwrapper.classList.add("reverse");
     }
     // if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - description.offsetHeight) {
     //     description.classList.add("sticky");
