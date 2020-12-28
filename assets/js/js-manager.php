@@ -12,7 +12,5 @@ function dttl_register_js(){
     wp_enqueue_script('dttl_sticky');
     wp_register_script('dttl_slider', $jsUrl . '/slider.js', array(), '1.0', true);
     wp_enqueue_script('dttl_slider');
-    wp_register_script('dttl_detailslider', $jsUrl . '/detailslider.js', array(), '1.0', true);
-    wp_enqueue_script('dttl_detailslider');
 }
 ?>

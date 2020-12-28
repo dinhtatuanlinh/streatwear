@@ -7,6 +7,12 @@ body {
     background-color: #2d2d2d;
 }
 
+#menusidebar .iconmenu {
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
 #notif {
     background-image: linear-gradient(to right, #ff860e, #fbae00);
     padding: 7px 20px 6px;
@@ -26,7 +32,8 @@ body {
 }
 
 #background .imgbackground {
-    height: 100vh;
+    /* height: 100vh;
+    width: 100vw; */
     width: 100vw;
 }
 
@@ -37,6 +44,22 @@ body {
     min-width: 1200px;
     display: flex;
     justify-content: space-between;
+}
+
+#background #top .menuwrapper {
+    display: flex;
+    justify-content: right;
+}
+
+#background #top .menuwrapper .iconmenu {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 21.96px;
+}
+
+#background #top .menuwrapper .iconmenu a {
+    padding-right: 15px;
 }
 
 #background nav {
@@ -85,18 +108,18 @@ body {
 }
 
 #background nav>ul>li:nth-child(2):hover~hr {
-    margin-left: calc(var(--whr));
-    width: var(--whr);
+    margin-left: calc(var(--whr)*1.3);
+    width: calc(var(--whr)*1.1);
 }
 
 #background nav>ul>li:nth-child(3):hover~hr {
-    margin-left: calc(var(--whr)*2.2);
-    width: var(--whr);
+    margin-left: calc(var(--whr)*2.8);
+    width: calc(var(--whr)*1.2);
 }
 
 #background nav>ul>li:nth-child(4):hover~hr {
-    margin-left: calc(var(--whr)*3.8);
-    width: var(--whr);
+    margin-left: calc(var(--whr)*4.4);
+    width: calc(var(--whr)*2.4);
 }
 
 #background nav>ul>hr {
@@ -142,7 +165,7 @@ body {
 
 #menusidebar nav>ul>li>ul {
     padding-left: 20px;
-    display: none;
+    /* display: none; */
 }
 
 #menusidebar nav>ul>li:focus ul {
@@ -185,6 +208,10 @@ body {
 
 .infowrapper {
     padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
 }
 
 .infowrapper .name {
