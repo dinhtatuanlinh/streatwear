@@ -362,6 +362,7 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 auto;
 }
 
 #categories .catitems {
@@ -533,6 +534,11 @@ footer li a {
     text-decoration: none;
 }
 
+.contact {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
 .wrapper .pagetitle {
     text-align: center;
     font-size: 50px;
@@ -548,27 +554,41 @@ footer li a {
     margin: 0 auto 50px auto;
 }
 
-.wrapper form div {
+.wrapper form p {
     display: flex;
     flex-direction: column;
-    border-bottom: 1px solid #fff;
+    border: none;
     margin-bottom: 10px;
 }
 
-.wrapper form div label {
+.wrapper form p label {
     font-size: 18px;
     color: #fff;
 }
 
-.wrapper form div input {
+.wrapper form p input {
     font-size: 18px;
     background-color: transparent;
-    border: none
+    border-bottom: 1px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
-.wrapper form div textarea {
+.wrapper form p textarea {
     background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.wrapper form .submit {
     border: none;
+    color: #fff;
+}
+
+.wrapper form div {
+    color: red;
 }
 
 #detail {
@@ -591,6 +611,7 @@ footer li a {
 #detail .productwrapper .thumbnailwrapper .thumbnail {
     display: flex;
     flex-direction: column;
+    width: 80px;
 }
 
 #detail .productwrapper .thumbnailwrapper .thumbnail img {

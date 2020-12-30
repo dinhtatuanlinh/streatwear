@@ -11,9 +11,9 @@
         $product = new WC_Product($post->ID);
         $data = $product->get_data();
         $image_ids = $product->get_gallery_image_ids();
-        echo '<pre style="color: #fff">';
-        print_r(get_post_meta( $post->ID, '_product_attributes' ));
-        echo '</pre>'
+        // echo '<pre style="color: #fff">';
+        // print_r(get_post_meta( $post->ID, '_product_attributes' ));
+        // echo '</pre>'
         
     ?>
 <div id="detail">

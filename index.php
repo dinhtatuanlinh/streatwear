@@ -1,5 +1,6 @@
 <?php 
 get_header(); 
+get_header('menubackground');
 $upload_dir = wp_upload_dir();
 // echo '<pre style="color: #fff">';
 // print_r($upload_dir['url']);
@@ -171,4 +172,7 @@ $upload_dir = wp_upload_dir();
             <button>read our story</button>
         </div>
     </div>
-    <?php get_footer(); ?>
+    <?php 
+    get_footer("footer");
+    get_footer(); 
+    ?>

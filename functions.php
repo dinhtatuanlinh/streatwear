@@ -6,7 +6,13 @@ define('STREETWEAR_THEME_INC_DIR', STREETWEAR_THEME_DIR . '/inc');
 define('STREETWEAR_THEME_ASSETS_DIR', STREETWEAR_THEME_DIR . '/assets');
 define('STREETWEAR_THEME_CUSTOMIZER_DIR', STREETWEAR_THEME_INC_DIR . '/customizer');
 define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
-
+// ----------------------------------
+// 8. định nghĩa add woocommerce support to the theme
+// ----------------------------
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+   add_theme_support( 'woocommerce' );
+}   
 
 
 // ----------------------------

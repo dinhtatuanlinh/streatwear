@@ -1,5 +1,6 @@
 <?php 
-get_header("top"); 
+get_header();
+get_header("menu"); 
 $upload_dir = wp_upload_dir();
 // echo '<pre style="color: #fff">';
 // print_r($upload_dir['url']);
@@ -21,17 +22,32 @@ $upload_dir = wp_upload_dir();
     set_query_var('termid', $page->term_id);// truyền biến tới template part
     set_query_var('cat_name', $page->name);
     set_query_var('cat_slug', $page->slug);
+    set_query_var('pageId', $page->ID);
+    set_query_var('post_title', $page->post_title);
 ?>
 <?php
 
 // echo '<pre style="color: #fff">';
 // print_r(get_post()->post_type);
 // echo '</pre>'
-if($page->post_type == "page"){
-    get_template_part( 'page', 'normal' );
-} else if ($page->taxonomy == "product_cat"){
-    get_template_part( 'page', 'productcat' );
-}
+// if($page->post_type == "page"){
+//     // echo get_post()->post_type;
+//     switch ($page->post_title) {
+//         case 'Liên hệ':
+//             get_template_part( 'page', 'contact' );
+//             break;
+//         // case 'Cart':
+//         //     get_template_part( 'page', 'cart' );
+//         //     break;
+//         // default:
+//         //     get_template_part( 'page', 'normal' );
+//     }
+//     // echo get_post()->post_type;
+//     // get_template_part( 'page', 'normal' );
+    
+// } else if ($page->taxonomy == "product_cat"){
+//     get_template_part( 'page', 'productcat' );
+// }
 // switch (get_post()->post_type) {
 //     case 'post':
 //         get_template_part( 'single', 'post' );
@@ -43,4 +59,7 @@ if($page->post_type == "page"){
 //         get_template_part( 'single', 'default' );
 // }
 ?>
-<?php get_footer(); ?>
+<?php 
+get_footer("footer");
+get_footer();
+?>

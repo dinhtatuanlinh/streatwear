@@ -1,5 +1,6 @@
 <?php 
-get_header("top"); 
+get_header();
+get_header("menu"); 
 $upload_dir = wp_upload_dir();
 // echo '<pre style="color: #fff">';
 // print_r($upload_dir['url']);
@@ -16,7 +17,7 @@ $upload_dir = wp_upload_dir();
             get_template_part( 'single', 'post' );
             break;
         case 'product':
-            get_template_part( 'single', 'proddetail' );
+            wc_get_template_part( 'single', 'product' );;
             break;
         default:
             get_template_part( 'single', 'default' );
@@ -25,4 +26,7 @@ $upload_dir = wp_upload_dir();
 <?php setPostViews(get_the_ID());//đếm số lượt xem bài post ?>
 
 
-<?php get_footer(); ?>
+<?php 
+get_footer("footer");
+get_footer();
+?>
