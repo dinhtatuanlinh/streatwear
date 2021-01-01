@@ -819,3 +819,36 @@ footer li a {
 #comment .comments .maincomment .imgcomment img {
     width: 160px;
 }
+
+.commentlist li {
+    list-style: none;
+}
+
+.comment_container {
+    display: flex;
+}
+
+.comment_container img {
+    width: 100px !important;
+    height: 100px !important;
+}
+
+.commentlist .comment-text {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.commentlist .comment-text .meta {
+    margin: 0;
+    font-size: 13px;
+}
+
+.commentlist .comment-text .description {
+    font-size: 15px;
+    text-transform: capitalize;
+    padding-left: 0;
+}
+
+.commentlist .comment-text .description p {
+    margin: 0;
+}

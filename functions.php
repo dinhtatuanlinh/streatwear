@@ -6,6 +6,12 @@ define('STREETWEAR_THEME_INC_DIR', STREETWEAR_THEME_DIR . '/inc');
 define('STREETWEAR_THEME_ASSETS_DIR', STREETWEAR_THEME_DIR . '/assets');
 define('STREETWEAR_THEME_CUSTOMIZER_DIR', STREETWEAR_THEME_INC_DIR . '/customizer');
 define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
+// ---------------------------------
+// 9. remove một số thành phần ko cần thiết trong trang single product
+// ----------------------------------
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 // ----------------------------------
 // 8. định nghĩa add woocommerce support to the theme
 // ----------------------------

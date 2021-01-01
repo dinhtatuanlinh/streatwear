@@ -18,44 +18,36 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
+global $product;
+
+$columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
+$post_thumbnail_id = $product->get_image_id();
+$image_ids = $product->get_gallery_image_ids()
+
+$rating_count = $product->get_rating_count();
+$review_count = $product->get_review_count();
+$average      = $product->get_average_rating();
+
+
+
 
 get_header( 'shop' ); 
+/**
+ * Hook: woocommerce_before_single_product.
+ *
+ * @hooked woocommerce_output_all_notices - 10
+ */
+do_action( 'woocommerce_before_single_product' );
 ?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
+	
+		<?php // while ( have_posts() ) : ?>
+			<?php // the_post(); ?>
 
-		<?php while ( have_posts() ) : ?>
-			<?php the_post(); ?>
+			<?php // wc_get_template_part( 'content', 'single-product' ); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+		<?php // endwhile; // end of the loop. ?>
 
-		<?php endwhile; // end of the loop. ?>
-
-	<?php
-		/**
-		 * woocommerce_after_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
-		 */
-		do_action( 'woocommerce_after_main_content' );
-	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
 
 <?php
 get_footer( 'shop' );

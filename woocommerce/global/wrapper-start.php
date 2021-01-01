@@ -43,6 +43,8 @@ switch ( $template ) {
 	case 'twentysixteen':
 		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
 		break;
+	case 'streetwear':
+		echo ''
 	default:
 		echo '<div id="primary" class="content-area"><main id="main" class="site-main" role="main">';
 		break;

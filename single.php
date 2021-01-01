@@ -16,9 +16,7 @@ $upload_dir = wp_upload_dir();
         case 'post':
             get_template_part( 'single', 'post' );
             break;
-        case 'product':
-            wc_get_template_part( 'single', 'product' );;
-            break;
+
         default:
             get_template_part( 'single', 'default' );
     }
