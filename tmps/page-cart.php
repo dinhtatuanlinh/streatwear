@@ -2,6 +2,9 @@
     get_header();
 
 ?>
+<?php
+    wc_get_template_part( 'cart/cart');
+?>
 <div class="wrapper">
     <div class="w3-row-padding">
         <div class="w3-col s12 m4 l4">

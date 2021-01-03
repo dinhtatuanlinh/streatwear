@@ -26,6 +26,11 @@ $upload_dir = wp_upload_dir();
     set_query_var('post_title', $page->post_title);
 ?>
 <?php
+while (have_posts()) : the_post();
+
+the_content();
+
+endwhile;
 
 // echo '<pre style="color: #fff">';
 // print_r(get_post()->post_type);
