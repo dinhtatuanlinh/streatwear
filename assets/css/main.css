@@ -852,3 +852,8 @@ footer li a {
 .commentlist .comment-text .description p {
     margin: 0;
 }
+
+.product-thumbnail img {
+    width: 60px;
+    height: 60px;
+}
