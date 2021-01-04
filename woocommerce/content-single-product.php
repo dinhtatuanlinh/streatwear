@@ -33,8 +33,8 @@ echo '<pre style="color: #fff">';
 print_r($product->get_type());
 // print_r($review_count);
 // print_r($average);
-echo '<b style="color:#fff">linh</b>';
-echo '</pre>';
+// echo '<b style="color:#fff">linh</b>';
+// echo '</pre>';
 /**
  * Hook: woocommerce_before_single_product.
  *

@@ -83,35 +83,38 @@
         </div>
 
         <div id="top" class="w3-hide-small w3-hide-medium">
-            <div id="logo"><img class="dttllogo" src="<?php echo $logo_data['logo']; ?>" alt="logo"></div>
-            <div class="menuwrapper">
-            <?php
-                        if(has_nav_menu('main_menu')){
-                            $args = array(
-                                'menu'                 => '',
-                                'container'            => 'nav',
-                                'container_class'      => '',
-                                'container_id'         => '',
-                                'container_aria_label' => '',
-                                'menu_class'           => '',
-                                'menu_id'              => '',
-                                'echo'                 => true,
-                                'fallback_cb'          => 'wp_page_menu',
-                                'before'               => '',
-                                'after'                => '',
-                                'link_before'          => '',
-                                'link_after'           => '',
-                                'items_wrap'           => '<ul>%3$s<hr/></ul>',//%3$s tương ứng với giá trị trong cặp thẻ li đưa vào
-                                'item_spacing'         => 'preserve',
-                                'depth'                => 2,// cho phép menu hiện 2 cấp nếu bằng 0 thì hiện tất cả các cấp bằng 1 thì chỉ hiện menu cha
-                                'walker'               => '',
-                                'theme_location'       => 'main_menu',
-                            );
-                            wp_nav_menu( $args );
-                        }
-                    ?>
-<div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href="<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+            <div class="menu">
+                <div id="logo"><img class="dttllogo" src="<?php echo $logo_data['logo']; ?>" alt="logo"></div>
+                <div class="menuwrapper">
+                <?php
+                            if(has_nav_menu('main_menu')){
+                                $args = array(
+                                    'menu'                 => '',
+                                    'container'            => 'nav',
+                                    'container_class'      => '',
+                                    'container_id'         => '',
+                                    'container_aria_label' => '',
+                                    'menu_class'           => '',
+                                    'menu_id'              => '',
+                                    'echo'                 => true,
+                                    'fallback_cb'          => 'wp_page_menu',
+                                    'before'               => '',
+                                    'after'                => '',
+                                    'link_before'          => '',
+                                    'link_after'           => '',
+                                    'items_wrap'           => '<ul>%3$s<hr/></ul>',//%3$s tương ứng với giá trị trong cặp thẻ li đưa vào
+                                    'item_spacing'         => 'preserve',
+                                    'depth'                => 2,// cho phép menu hiện 2 cấp nếu bằng 0 thì hiện tất cả các cấp bằng 1 thì chỉ hiện menu cha
+                                    'walker'               => '',
+                                    'theme_location'       => 'main_menu',
+                                );
+                                wp_nav_menu( $args );
+                            }
+                        ?>
+    <div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href="<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
                     </div>
+            </div>
+            
             <!-- <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>

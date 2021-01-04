@@ -6,6 +6,18 @@ define('STREETWEAR_THEME_INC_DIR', STREETWEAR_THEME_DIR . '/inc');
 define('STREETWEAR_THEME_ASSETS_DIR', STREETWEAR_THEME_DIR . '/assets');
 define('STREETWEAR_THEME_CUSTOMIZER_DIR', STREETWEAR_THEME_INC_DIR . '/customizer');
 define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
+
+
+// ------------------
+// 10. admin bar
+// -----------------------------
+// function admin_bar(){
+
+//     if(is_user_logged_in()){
+//       add_filter( 'show_admin_bar', '__return_true' , 1000 );
+//     }
+//   }
+//   add_action('init', 'admin_bar' );
 // ---------------------------------
 // 9. remove một số thành phần ko cần thiết trong trang single product
 // ----------------------------------

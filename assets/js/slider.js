@@ -11,28 +11,37 @@ if (w > 600 && document.getElementById("clothesslider") !== null) {
     showDivs(slideIndex, mobileslider);
 }
 
-function swipe(n) {
-    if (n === 'right') {
-        slideIndex -= 1;
-    } else if (n === 'left') {
-        slideIndex += 1;
-    }
-
-    var i;
+// swipe mobile
+document.addEventListener('swiped-left', () => {
+    slideIndex += 1;
     var x = document.getElementsByClassName(mobileslider);
     if (slideIndex > x.length) {
         slideIndex = 1;
     }
     if (slideIndex < 1) {
-        slideIndex = x.length
+        slideIndex = x.length;
     }
-    for (i = 0; i < x.length; i++) {
+    for (var i = 0; i < x.length; i++) {
         x[i].style.display = "none";
     }
     x[slideIndex - 1].style.display = "block";
-}
-document.addEventListener('swiped-left', swipe("left"));
-document.addEventListener('swiped-right', swipe("right"));
+});
+
+document.addEventListener('swiped-right', () => {
+    slideIndex -= 1;
+    var x = document.getElementsByClassName(mobileslider);
+    if (slideIndex > x.length) {
+        slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+        slideIndex = x.length;
+    }
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+});
+// end swipe mobile
 
 function plusDivs(n) {
     showDivs(slideIndex += n, desktopslider);

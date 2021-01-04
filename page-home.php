@@ -2,7 +2,6 @@
 get_header(); 
 get_header('menubackground');
 $upload_dir = wp_upload_dir();
-
 // echo '<pre style="color: #fff">';
 // print_r($upload_dir['url']);
 // echo '</pre>';
@@ -147,15 +146,15 @@ $upload_dir = wp_upload_dir();
                 </div>
                 <div class="catitems w3-col s6 m3 l3">
                     <a href="">
-                        <img src="<?php echo $upload_dir['url']; ?>/cupids-revenge-430_900x.png" alt="all products">
+                        <img src="<?php echo $upload_dir['url']; ?>/bag-boy-330_360x.png" alt="all products">
                         <div class="catname">all products</div>
                     </a>
                 </div>
             </div>
         </div>
 
+
     </div>
-    
     <div id="quality">
         <img src="<?php echo $upload_dir['url']; ?>/DSC00382_1728x.png" alt="quality">
         <div class="content contentdesktop w3-hide-small">
@@ -174,7 +173,6 @@ $upload_dir = wp_upload_dir();
         </div>
     </div>
     <?php 
-    
     get_footer("footer");
     get_footer(); 
     ?>

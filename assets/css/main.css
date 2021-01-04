@@ -41,6 +41,14 @@ body {
     position: absolute;
     top: 0;
     padding: 30px 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+}
+
+#background #top .menu {
+    justify-content: space-between;
     min-width: 1200px;
     display: flex;
     justify-content: space-between;
@@ -49,6 +57,10 @@ body {
 #background #top .menuwrapper {
     display: flex;
     justify-content: right;
+}
+
+#background #top .menuwrapper .menu-item-has-children:hover ul {
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #background #top .menuwrapper .iconmenu {

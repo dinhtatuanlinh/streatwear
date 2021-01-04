@@ -1,6 +1,11 @@
 <?php 
 get_header();
-get_header("menu"); 
+if (is_home()){
+    get_header('menubackground');
+}else{
+    get_header("menu"); 
+}
+
 $upload_dir = wp_upload_dir();
 // echo '<pre style="color: #fff">';
 // print_r($upload_dir['url']);
