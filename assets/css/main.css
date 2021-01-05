@@ -834,6 +834,10 @@ footer li a {
 
 .commentlist li {
     list-style: none;
+    color: #fff;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
 }
 
 .comment_container {
@@ -856,16 +860,34 @@ footer li a {
 }
 
 .commentlist .comment-text .description {
-    font-size: 15px;
     text-transform: capitalize;
     padding-left: 0;
 }
 
 .commentlist .comment-text .description p {
     margin: 0;
+    font-size: 18px;
 }
 
 .product-thumbnail img {
     width: 60px;
     height: 60px;
+}
+
+.woocommerce-Reviews-title {
+    color: #fff;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p.stars {
+    display: none !important;
+}
+
+#rating {
+    display: block !important;
+}
+
+#respond {
+    color: #fff;
 }

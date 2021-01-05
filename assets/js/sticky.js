@@ -4,6 +4,7 @@ if (w > 600 && document.getElementById("detail") !== null) {
     var pictures = document.getElementsByClassName("pictures")[0];
     var detail = document.getElementById("detail");
     var sticky = detail.offsetTop;
+    console.log(sticky);
     var comment = document.getElementById("comment");
     var windowheight = window.innerHeight;
 
@@ -12,7 +13,7 @@ if (w > 600 && document.getElementById("detail") !== null) {
     var thumbnailwrapper = document.getElementsByClassName("thumbnailwrapper")[0];
     var removesticky = pictures.offsetTop + pictures.offsetHeight - windowheight;
     window.onscroll = () => {
-        // && window.pageYOffset <= removesticky
+        // console.log(window.pageYOffset);
         if (window.pageYOffset >= sticky && window.pageYOffset <= comment.offsetTop - thumbnail.offsetHeight - 50) {
             thumbnail.classList.add("sticky");
             thumbnailwrapper.classList.remove("reverse");

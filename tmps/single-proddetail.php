@@ -16,7 +16,7 @@
         // echo '</pre>'
         
     ?>
-<div id="detail">
+    <div id="detail">
         <div class="productwrapper">
             <div class="thumbnailwrapper w3-hide-small">
                 <div class="thumbnail">

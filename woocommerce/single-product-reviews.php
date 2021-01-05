@@ -28,14 +28,16 @@ if ( ! comments_open() ) {
 	<div id="comments">
 		<h2 class="woocommerce-Reviews-title">
 			<?php
-			$count = $product->get_review_count();
-			if ( $count && wc_review_ratings_enabled() ) {
-				/* translators: 1: reviews count 2: product name */
-				$reviews_title = sprintf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
-				echo apply_filters( 'woocommerce_reviews_title', $reviews_title, $count, $product ); // WPCS: XSS ok.
-			} else {
-				esc_html_e( 'Reviews', 'woocommerce' );
-			}
+			// display reviews title
+			// -----------------------
+			// $count = $product->get_review_count();
+			// if ( $count && wc_review_ratings_enabled() ) {
+			// 	/* translators: 1: reviews count 2: product name */
+			// 	$reviews_title = sprintf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
+			// 	echo apply_filters( 'woocommerce_reviews_title', $reviews_title, $count, $product ); // WPCS: XSS ok.
+			// } else {
+			// 	esc_html_e( 'Reviews', 'woocommerce' );
+			// }
 			?>
 		</h2>
 
@@ -72,7 +74,7 @@ if ( ! comments_open() ) {
 				$commenter    = wp_get_current_commenter();
 				$comment_form = array(
 					/* translators: %s is product title */
-					'title_reply'         => have_comments() ? esc_html__( 'Add a review', 'woocommerce' ) : sprintf( esc_html__( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
+					'title_reply'         => have_comments() ? esc_html__( 'Leave your review', 'woocommerce' ) : sprintf( esc_html__( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
 					/* translators: %s is product title */
 					'title_reply_to'      => esc_html__( 'Leave a Reply to %s', 'woocommerce' ),
 					'title_reply_before'  => '<span id="reply-title" class="comment-reply-title">',
@@ -121,7 +123,7 @@ if ( ! comments_open() ) {
 				}
 
 				if ( wc_review_ratings_enabled() ) {
-					$comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select name="rating" id="rating" required>
+					$comment_form['comment_field'] = '<div class="comment-form-rating"><label for="rating">' . esc_html__( 'Your rating', 'woocommerce' ) . ( wc_review_ratings_required() ? '&nbsp;<span class="required">*</span>' : '' ) . '</label><select style="display: block !important;" name="rating" id="rating" required>
 						<option value="">' . esc_html__( 'Rate&hellip;', 'woocommerce' ) . '</option>
 						<option value="5">' . esc_html__( 'Perfect', 'woocommerce' ) . '</option>
 						<option value="4">' . esc_html__( 'Good', 'woocommerce' ) . '</option>
@@ -130,6 +132,17 @@ if ( ! comments_open() ) {
 						<option value="1">' . esc_html__( 'Very poor', 'woocommerce' ) . '</option>
 					</select></div>';
 				}
+
+				// loại bỏ dòng code ko mong muốn
+				// str_replace('<p class="stars"><span><a class="star-1" href="#">1</a><a class="star-2" href="#">2</a><a class="star-3" href="#">3</a><a class="star-4" href="#">4</a><a class="star-5" href="#">5</a></span></p>'," ", $comment_form['comment_field']);
+				echo '<pre style="color: #fff">';
+				print_r($comment_form['fields']);
+				echo '</pre>';
+
+				// echo '<pre style="color: #fff">';
+        // print_r(get_post_meta( $post->ID, '_product_attributes' ));
+        // echo '</pre>'
+
 
 				$comment_form['comment_field'] .= '<p class="comment-form-comment"><label for="comment">' . esc_html__( 'Your review', 'woocommerce' ) . '&nbsp;<span class="required">*</span></label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea></p>';
 

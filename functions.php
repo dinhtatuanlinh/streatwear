@@ -7,6 +7,25 @@ define('STREETWEAR_THEME_ASSETS_DIR', STREETWEAR_THEME_DIR . '/assets');
 define('STREETWEAR_THEME_CUSTOMIZER_DIR', STREETWEAR_THEME_INC_DIR . '/customizer');
 define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
 
+// -----------------
+// 10. add some action hooks
+// -----------------
+if ( ! function_exists( 'linh_woocommerce_taxonomy_archive_description' ) ) {
+
+	/**
+	 * Show an archive description on taxonomy archives.
+	 */
+	function linh_woocommerce_taxonomy_archive_description() {
+		if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
+			$term = get_queried_object();
+
+			if ( $term && ! empty( $term->description ) ) {
+				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo '<div class="term-description">' . wc_format_content( $term->description ) . '</div>';
+			}
+		}
+	}
+}
 
 // ------------------
 // 10. admin bar
@@ -21,6 +40,7 @@ define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
 // ---------------------------------
 // 9. remove một số thành phần ko cần thiết trong trang single product
 // ----------------------------------
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );

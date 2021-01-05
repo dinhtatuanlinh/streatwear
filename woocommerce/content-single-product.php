@@ -28,9 +28,9 @@ $review_count = $product->get_review_count();
 $average      = $product->get_average_rating();
 $product_tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
-echo '<pre style="color: #fff">';
+// echo '<pre style="color: #fff">';
 // print_r($product);
-print_r($product->get_type());
+// print_r($product->get_type());
 // print_r($review_count);
 // print_r($average);
 // echo '<b style="color:#fff">linh</b>';
@@ -47,7 +47,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="detail">
+    <div id="detail">
         <div class="productwrapper">
 			<div class="thumbnailwrapper w3-hide-small">
                 <div class="thumbnail">
@@ -165,65 +165,147 @@ if ( post_password_required() ) {
 
                         </div>
 					</div>
-					<div class="tabs">
-						<div class=""><?php echo $product_tabs['reviews']['title']; ?></div>
-						<div class=""><?php call_user_func( $product_tabs['reviews']['callback'], 'reviews', $product_tabs['reviews'] );; ?></div>
-						<?php
-						/**
-						 * Hook: woocommerce_after_single_product_summary.
-						 *
-						 * @hooked woocommerce_output_product_data_tabs - 10
-						 * @hooked woocommerce_upsell_display - 15
-						 * @hooked woocommerce_output_related_products - 20
-						 */
-						// do_action( 'woocommerce_after_single_product_summary' );
-						echo '<pre style="color: #fff">';
-						print_r($product_tabs['reviews']);
-						echo '</pre>';
-						?>
-					</div>
+					
                 </div>
             </div>
 	
-	<?php
-	/**
-	 * Hook: woocommerce_before_single_product_summary.
-	 *
-	 * @hooked woocommerce_show_product_sale_flash - 10
-	 * @hooked woocommerce_show_product_images - 20
-	 */
-	// do_action( 'woocommerce_before_single_product_summary' );
-	?>
+        <?php
+        /**
+         * Hook: woocommerce_before_single_product_summary.
+         *
+         * @hooked woocommerce_show_product_sale_flash - 10
+         * @hooked woocommerce_show_product_images - 20
+         */
+        // do_action( 'woocommerce_before_single_product_summary' );
+        ?>
 
-	<div class="summary entry-summary">
-		<?php
-		/**
-		 * Hook: woocommerce_single_product_summary.
-		 *
-		 * @hooked woocommerce_template_single_title - 5
-		 * @hooked woocommerce_template_single_rating - 10
-		 * @hooked woocommerce_template_single_price - 10
-		 * @hooked woocommerce_template_single_excerpt - 20
-		 * @hooked woocommerce_template_single_add_to_cart - 30
-		 * @hooked woocommerce_template_single_meta - 40
-		 * @hooked woocommerce_template_single_sharing - 50
-		 * @hooked WC_Structured_Data::generate_product_data() - 60
-		 */
-		// do_action( 'woocommerce_single_product_summary' );
-		?>
-	</div>
+        <div class="summary entry-summary">
+            <?php
+            /**
+             * Hook: woocommerce_single_product_summary.
+             *
+             * @hooked woocommerce_template_single_title - 5
+             * @hooked woocommerce_template_single_rating - 10
+             * @hooked woocommerce_template_single_price - 10
+             * @hooked woocommerce_template_single_excerpt - 20
+             * @hooked woocommerce_template_single_add_to_cart - 30
+             * @hooked woocommerce_template_single_meta - 40
+             * @hooked woocommerce_template_single_sharing - 50
+             * @hooked WC_Structured_Data::generate_product_data() - 60
+             */
+            // do_action( 'woocommerce_single_product_summary' );
+            ?>
+        </div>
 
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	// do_action( 'woocommerce_after_single_product_summary' );
-	?>
-	</div>
-</div>
+        <?php
+        /**
+         * Hook: woocommerce_after_single_product_summary.
+         *
+         * @hooked woocommerce_output_product_data_tabs - 10
+         * @hooked woocommerce_upsell_display - 15
+         * @hooked woocommerce_output_related_products - 20
+         */
+        // do_action( 'woocommerce_after_single_product_summary' );
+        ?>
+        </div>
+    </div>
 
+
+
+    <div id="comment">
+        <!-- <div class="starpercent">
+            <div class="commenttitle">Verified Customer Reviews</div>
+            <div class="ratebox">
+                <div>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <span>Based on 171 reviews</span>
+                </div>
+                <div>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <span>96% (164)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>4% (6)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>1% (1)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>0% (0)</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <span>0% (0)</span>
+                    </p>
+                </div>
+            </div>
+            <div class="commentrecent">Most Recent</div>
+        </div> -->
+        <div class="commenttitle">
+            <h2 class="woocommerce-Reviews-title"><?php echo $product_tabs['reviews']['title']; ?></h2>
+        </div>
+        <div class="comments">
+            <?php call_user_func( $product_tabs['reviews']['callback'], 'reviews', $product_tabs['reviews'] );; ?>
+            <!-- <div class="topcomment">
+                <div class="ava"><img src="imgs/NoProfileLarge.png" alt="avatar"></div>
+                <div class="rateuser">
+                    <div class="rate">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <span>Tuna</span>
+                </div>
+
+            </div> -->
+            <!-- <div class="maincomment">
+                <div class="short">Great</div>
+                <p>It took about a week for me to get my piece but it was well worth it when it arrived. I like how it looks on me. Can’t wait order another one. This is a great first chain.</p>
+                <div class="imgcomment">
+                    <img src="imgs/1606779978__BAE66ED9-3FDF-43D1-A54B-FFEF4C8850DC__original.webp" alt="">
+                </div>
+            </div> -->
+        </div>
+        <ul class="pagination">
+            <li><span class="button disabled">Prev</span></li>
+            <li><a href="#" class="page active">1</a></li>
+            <li><a href="#" class="page">2</a></li>
+            <li><a href="#" class="page">3</a></li>
+            <li><span>&hellip;</span></li>
+            <li><a href="#" class="page">8</a></li>
+            <li><a href="#" class="page">9</a></li>
+            <li><a href="#" class="page">10</a></li>
+            <li><a href="#" class="button">Next</a></li>
+        </ul>
+    </div>
 <?php do_action( 'woocommerce_after_single_product' ); ?>
