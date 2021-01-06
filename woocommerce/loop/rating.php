@@ -24,5 +24,31 @@ global $product;
 if ( ! wc_review_ratings_enabled() ) {
 	return;
 }
+$average = $product->get_average_rating();
+?>
+<div class="star-rate">
+<?php
+	for($i = 0; $i < floor($average); $i++){
+		?>
+		<i class="fa fa-star" aria-hidden="true"></i>
+		<?php
+		
+	}
+	if($average - floor($average) !== 0){
+		?>
+		<i class="fa fa-star-half-o" aria-hidden="true"></i>
+		<?php
+	}
+	if(5 - ceil($average) !== 0){
+		for($i = 0; $i < (5 - ceil($average)); $i++){ 
+			?>
+			<i class="fa fa-star-o" aria-hidden="true"></i>
+			<?php
+		}
+	}
+?>
+</div>
+<?php
 
-echo wc_get_rating_html( $product->get_average_rating() ); // WordPress.XSS.EscapeOutput.OutputNotEscaped.
+//echo wc_get_rating_html( $product->get_average_rating() ); // WordPress.XSS.EscapeOutput.OutputNotEscaped.
+?>

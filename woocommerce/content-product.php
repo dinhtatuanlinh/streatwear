@@ -24,7 +24,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<li <?php wc_product_class( '', $product ); ?>>
+<div class="w3-col s12 m4 l4 cat-items" <?php wc_product_class( '', $product ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
@@ -45,6 +45,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
+	 * @hooked woocommerce_template_loop_price - 20
 	 */
 	do_action( 'woocommerce_shop_loop_item_title' );
 
@@ -52,7 +53,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * Hook: woocommerce_after_shop_loop_item_title.
 	 *
 	 * @hooked woocommerce_template_loop_rating - 5
-	 * @hooked woocommerce_template_loop_price - 10
+	 * @hooked woocommerce_template_loop_price - 10 XXXX
 	 */
 	do_action( 'woocommerce_after_shop_loop_item_title' );
 
@@ -64,4 +65,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 */
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-</li>
+</div>

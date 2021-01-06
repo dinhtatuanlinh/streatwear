@@ -26,3 +26,14 @@ for (var i = 0; i < tabs.length; i++) {
     }
 }
 // end tabs
+
+// disable addtocart buttons
+var add_to_cart_button = document.getElementsByClassName('add_to_cart_button');
+if (add_to_cart_button.length !== 0) {
+    for (var i = 0; i < add_to_cart_button.length; i++) {
+        add_to_cart_button[i].onclick = (e) => {
+            // console.log(e);
+            e.target.style.display = "none"
+        }
+    }
+}

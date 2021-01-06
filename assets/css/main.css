@@ -891,3 +891,24 @@ p.stars {
 #respond {
     color: #fff;
 }
+
+.cat-items {
+    text-align: center;
+    color: #fff;
+}
+
+.cat-items a {
+    text-decoration: none;
+}
+
+.cat-items h2 {
+    text-transform: capitalize;
+}
+
+.cat-items .star-rate {
+    color: #FF860B;
+}
+
+.invi-addtocart {
+    display: none;
+}

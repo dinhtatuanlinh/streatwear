@@ -10,23 +10,10 @@ define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
 // -----------------
 // 10. add some action hooks
 // -----------------
-if ( ! function_exists( 'linh_woocommerce_taxonomy_archive_description' ) ) {
 
-	/**
-	 * Show an archive description on taxonomy archives.
-	 */
-	function linh_woocommerce_taxonomy_archive_description() {
-		if ( is_product_taxonomy() && 0 === absint( get_query_var( 'paged' ) ) ) {
-			$term = get_queried_object();
-
-			if ( $term && ! empty( $term->description ) ) {
-				// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-				echo '<div class="term-description">' . wc_format_content( $term->description ) . '</div>';
-			}
-		}
-	}
-}
-
+add_action('linh_rate', 'woocommerce_template_loop_rating', 5);// index.php
+add_action('linh_addtocart', 'woocommerce_template_loop_add_to_cart', 5);// index.php
+add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_price', 20 );// woocomerce/content-product.php
 // ------------------
 // 10. admin bar
 // -----------------------------
@@ -40,7 +27,9 @@ if ( ! function_exists( 'linh_woocommerce_taxonomy_archive_description' ) ) {
 // ---------------------------------
 // 9. remove một số thành phần ko cần thiết trong trang single product
 // ----------------------------------
-remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+// remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 ); // woocommerce/content-product.php
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );// woocommerce/archive-product.php
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );

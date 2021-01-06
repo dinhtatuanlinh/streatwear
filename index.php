@@ -40,7 +40,23 @@ $upload_dir = wp_upload_dir();
                         <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                         <div class="infowrapper">
                             <div class="name"><?php the_title(); ?></div>
+                            <?php
+                                /**
+                                 * Hook: linh_addtocart.
+                                 *
+                                 * @hooked woocommerce_template_loop_rating - 5
+                                 */
+                                do_action( 'linh_rate');
+                            ?>
                             <div class="price"><?php echo $product->get_price_html(); ?></div>
+                            <?php
+                                /**
+                                 * Hook: linh_addtocart.
+                                 *
+                                 * @hooked woocommerce_template_loop_add_to_cart - 5
+                                 */
+                                do_action( 'linh_addtocart');
+                            ?>
                         </div>
                     </a>
                 </div>
@@ -83,7 +99,23 @@ $upload_dir = wp_upload_dir();
                     <img src="<?php  echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                     <div class="infowrapper">
                         <div class="name"><?php the_title(); ?></div>
+                        <?php
+                                /**
+                                 * Hook: linh_addtocart.
+                                 *
+                                 * @hooked woocommerce_template_loop_rating - 5
+                                 */
+                                do_action( 'linh_rate');
+                            ?>
                         <div class="price"><?php echo $product->get_price_html(); ?></div>
+                        <?php
+                                /**
+                                 * Hook: linh_addtocart.
+                                 *
+                                 * @hooked woocommerce_template_loop_add_to_cart - 5
+                                 */
+                                do_action( 'linh_addtocart');
+                            ?>
                     </div>
                 </li>
                 <?php
