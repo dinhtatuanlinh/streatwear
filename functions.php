@@ -28,6 +28,7 @@ add_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_price
 // 9. remove một số thành phần ko cần thiết trong trang single product
 // ----------------------------------
 // remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
+remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20);// woocommerce/archive-product.php
 remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_loop_price', 10 ); // woocommerce/content-product.php
 remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );// woocommerce/archive-product.php
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );

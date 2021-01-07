@@ -226,13 +226,34 @@ body {
     color: #fff;
 }
 
+.infowrapper i {
+    color: #ff860e;
+}
+
+.infowrapper a {
+    text-decoration: none;
+}
+
 .infowrapper .name {
     font-size: 21.96px;
     line-height: 1.6;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
 }
 
 .infowrapper .price {
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    color: #fbae00;
+}
+
+.infowrapper .button {
+    border: 1px solid #ff860e;
+    padding: 5px 10px;
+    color: #ff860e;
+    border-radius: 5px;
 }
 
 
@@ -551,6 +572,26 @@ footer li a {
     margin: 0 auto;
 }
 
+.wrapper {
+    padding: 20px 0;
+}
+
+.wrapper header {
+    border-bottom: 1px solid #FF860B;
+}
+
+.wrapper .linh-ordering {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #FF860B;
+}
+
+.wrapper form {
+    margin: 0 !important;
+}
+
 .wrapper .pagetitle {
     text-align: center;
     font-size: 50px;
@@ -604,7 +645,7 @@ footer li a {
 }
 
 #detail {
-    margin-bottom: 50px;
+    margin: 30px 0;
 }
 
 #detail .productwrapper {
@@ -665,6 +706,7 @@ footer li a {
     font-style: italic;
     font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
 }
 
 #detail .productwrapper .maindetail .description .review {
@@ -721,7 +763,7 @@ footer li a {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #fff;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
 #detail .productwrapper .maindetail .description .tabs {
@@ -897,6 +939,26 @@ p.stars {
     color: #fff;
 }
 
+.cat-items h2 {
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.cat-items .price {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    color: #fbae00;
+}
+
+.cat-items .button {
+    border: 1px solid #ff860e;
+    padding: 5px 10px;
+    color: #ff860e;
+    border-radius: 5px;
+}
+
 .cat-items a {
     text-decoration: none;
 }
@@ -907,8 +969,27 @@ p.stars {
 
 .cat-items .star-rate {
     color: #FF860B;
+    padding-bottom: 5px;
 }
 
 .invi-addtocart {
     display: none;
+}
+
+.woocommerce {
+    max-width: 1200px;
+    color: #fff;
+    margin: 20px auto;
+}
+
+.woocommerce table {
+    border: 1px solid #FF860B !important;
+}
+
+.woocommerce table th {
+    border-top: 1px solid #FF860B !important;
+}
+
+.woocommerce table td {
+    border-top: 1px solid #FF860B !important;
 }
