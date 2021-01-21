@@ -34,13 +34,13 @@ class Background_Section{
         // tạo phần tử upload logo
         // -------------------------
         $inputName = 'img_1';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][img]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'img_1-' . $inputName;
@@ -52,14 +52,13 @@ class Background_Section{
         // -------------------------
         // tạo phần tử upload logo
         // -------------------------
-        $inputName = 'mb_img_1';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][mbimg]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'mb_img_1-' . $inputName;
@@ -69,16 +68,38 @@ class Background_Section{
             'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
         )));
         // -------------------------
+        // tạo phần tử link cho mb background
+        // -------------------------
+        // $inputName = 'MBBG_link_1';
+        $settingID = $sectionID . '[' . $inputName . '][link]';
+        $wp_customize->add_setting($settingID, array(
+            'default' => '',// thông số mặc định cho phần tử trong section
+            'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
+            'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
+            // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
+            // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
+        ));
+        $controlID = 'MBBG_link-' . $inputName;
+        $wp_customize->add_control($controlID, array(
+            'label' => __('Link 1', 'Streetwear'),// Tên cho phần tử trong section
+            'section' => $sectionID,// tên của section mà phần tử đang chứa trong
+            'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
+            'type' => 'text',// kiểu dữ liệu của phần tử
+        ));
+        
+        
+        // -------------------------
         // tạo phần tử upload logo
         // -------------------------
         $inputName = 'img_2';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][img]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'img_2-' . $inputName;
@@ -90,14 +111,13 @@ class Background_Section{
         // -------------------------
         // tạo phần tử upload logo
         // -------------------------
-        $inputName = 'mb_img_2';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][mbimg]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'mb_img_2-' . $inputName;
@@ -107,16 +127,38 @@ class Background_Section{
             'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
         )));
         // -------------------------
+        // tạo phần tử link cho mb background
+        // -------------------------
+        // $inputName = 'MBBG_link_1';
+        $settingID = $sectionID . '[' . $inputName . '][link]';
+        $wp_customize->add_setting($settingID, array(
+            'default' => '',// thông số mặc định cho phần tử trong section
+            'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
+            'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
+            // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
+            // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
+        ));
+        $controlID = 'MBBG_link-' . $inputName;
+        $wp_customize->add_control($controlID, array(
+            'label' => __('Link 2', 'Streetwear'),// Tên cho phần tử trong section
+            'section' => $sectionID,// tên của section mà phần tử đang chứa trong
+            'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
+            'type' => 'text',// kiểu dữ liệu của phần tử
+        ));
+
+
+        // -------------------------
         // tạo phần tử upload logo
         // -------------------------
         $inputName = 'img_3';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][img]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'img_3-' . $inputName;
@@ -128,14 +170,13 @@ class Background_Section{
         // -------------------------
         // tạo phần tử upload logo
         // -------------------------
-        $inputName = 'mb_img_3';
-        $settingID = $sectionID . '[' . $inputName . ']';
+        $settingID = $sectionID . '[' . $inputName . '][mbimg]';
         $wp_customize->add_setting($settingID, array(
             // 'default' => 'facebook.com',// thông số mặc định cho phần tử trong section
             'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
             'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
             // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
-            'transport' => 'postMessage',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'postMessage' dữ liệu sẽ xuất hiện ngay lập tức
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
             // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
         ));
         $controlID = 'mb_img_3-' . $inputName;
@@ -144,5 +185,25 @@ class Background_Section{
             'section' => $sectionID,// tên của section mà phần tử đang chứa trong
             'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
         )));
+        // -------------------------
+        // tạo phần tử link cho mb background
+        // -------------------------
+        // $inputName = 'MBBG_link_1';
+        $settingID = $sectionID . '[' . $inputName . '][link]';
+        $wp_customize->add_setting($settingID, array(
+            'default' => '',// thông số mặc định cho phần tử trong section
+            'capability' => 'edit_theme_options',// phân quyền có thể chỉnh sửa cho user
+            'type' => 'theme_mod',// lưu dữ liệu dưới option name là theme_mod hay có thể đặt là 'option' dự liệu sẽ lưu dưới một option name riêng
+            // 'type' => 'option',// lưu dữ liệu trên bảng option với option name là $sectionID
+            'transport' => 'refresh',// dữ liệu sẽ xuất hiện sau khi refresh lại trang hoặc 'refresh' dữ liệu sẽ xuất hiện ngay lập tức
+            // 'sanitize_callback' => 'sanitize_DDN_theme_site_name'// tên của hàm lọc dữ liệu đưa vào
+        ));
+        $controlID = 'MBBG_link-' . $inputName;
+        $wp_customize->add_control($controlID, array(
+            'label' => __('Link 3', 'Streetwear'),// Tên cho phần tử trong section
+            'section' => $sectionID,// tên của section mà phần tử đang chứa trong
+            'settings' => $settingID,// tên của setting mà cài đặt cho phần tử này
+            'type' => 'text',// kiểu dữ liệu của phần tử
+        ));
     }
 }

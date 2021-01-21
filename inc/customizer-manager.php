@@ -36,6 +36,7 @@ class dttl_Theme_Customizer_Manager{
         require_once STREETWEAR_THEME_CUSTOMIZER_DIR . '/background-section.php';
         new Background_Section($this->_theme_mods);
     }
+
     public function logo(){
         require_once STREETWEAR_THEME_CUSTOMIZER_DIR . '/logo-section.php';
         new Logo_Section($this->_theme_mods);
@@ -43,7 +44,6 @@ class dttl_Theme_Customizer_Manager{
     // để update giá trị cho một option_name nào đó trong bảng option ta sử dụng
     // update_option('tên của option_name muốn thay đôi', 'giá trị thay đổi')
     // việc này để thêm vào giá trị customize mặc định sau khi thay đổi theme
-
     public function background_data($val = ''){// hàm này sẽ lấy dữ liệu từ customize ra để sử dụng ngoài theme
         // if(empty($val)) return false;
         $options = $this->_theme_mods['dttl_background'];// lấy dữ liệu trong section có sectionID là DDN_theme_elements để đưa ra ngoài

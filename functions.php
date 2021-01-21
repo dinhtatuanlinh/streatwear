@@ -7,9 +7,49 @@ define('STREETWEAR_THEME_ASSETS_DIR', STREETWEAR_THEME_DIR . '/assets');
 define('STREETWEAR_THEME_CUSTOMIZER_DIR', STREETWEAR_THEME_INC_DIR . '/customizer');
 define('STREETWEAR_THEME_URL_IMG', get_template_directory_uri() . '/img');
 
+// 11. update cart icon
+/**
+ * Ensure cart contents update when products are added to the cart via AJAX
+ */
+function my_header_add_to_cart_fragment( $fragments ) {
+ 
+    ob_start();
+    $count = WC()->cart->cart_contents_count;
+    ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
+    if ( $count > 0 ) {
+        ?>
+        <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
+        <?php            
+    }
+        ?></a><?php
+ 
+    $fragments['a.cart-contents'] = ob_get_clean();
+     
+    return $fragments;
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment' );
 // -----------------
 // 10. add some action hooks
 // -----------------
+/**
+ * Add Cart icon and count to header if WC is active
+ */
+function my_wc_cart_count() {
+ 
+    if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+ 
+        $count = WC()->cart->cart_contents_count;
+        ?><a class="cart-contents" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php
+        if ( $count > 0 ) {
+            ?>
+            <span class="cart-contents-count"><?php echo esc_html( $count ); ?></span>
+            <?php
+        }
+                ?></a><?php
+    }
+ 
+}
+add_action( 'linh_cart_icon', 'my_wc_cart_count' );// header-menu.php
 
 add_action('linh_rate', 'woocommerce_template_loop_rating', 5);// index.php
 add_action('linh_addtocart', 'woocommerce_template_loop_add_to_cart', 5);// index.php

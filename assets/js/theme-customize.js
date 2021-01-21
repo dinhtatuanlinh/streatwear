@@ -64,40 +64,10 @@
             })
             // instagram
         wp.customize('dttl_social_links[instagram]', function(value) {
-                value.bind(function(newValue) {
-                    $('.dttlinstagram').attr("href", newValue)
-                })
-            })
-            // background
-        wp.customize('dttl_background[img_1]', function(value) {
             value.bind(function(newValue) {
-                $('.dttlimg_1').attr("src", newValue)
+                $('.dttlinstagram').attr("href", newValue)
             })
         })
-        wp.customize('dttl_background[mb_img_1]', function(value) {
-            value.bind(function(newValue) {
-                $('.dttlmbimg_1').attr("src", newValue)
-            })
-        })
-        wp.customize('dttl_background[img_2]', function(value) {
-            value.bind(function(newValue) {
-                $('.dttlimg_2').attr("src", newValue)
-            })
-        })
-        wp.customize('dttl_background[mb_img_2]', function(value) {
-            value.bind(function(newValue) {
-                $('.dttlmbimg_2').attr("src", newValue)
-            })
-        })
-        wp.customize('dttl_background[img_3]', function(value) {
-            value.bind(function(newValue) {
-                $('.dttlimg_3').attr("src", newValue)
-            })
-        })
-        wp.customize('dttl_background[mb_img_3]', function(value) {
-            value.bind(function(newValue) {
-                $('.dttlmbimg_3').attr("src", newValue)
-            })
-        })
+
 
     }(jQuery))

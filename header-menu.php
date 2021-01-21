@@ -25,7 +25,17 @@
                             wp_nav_menu( $args );
                         }
                     ?>
-        <div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href="<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+        <div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> 
+        
+        
+        <!-- <a href="<?php //echo wc_get_cart_url(); ?>"> -->
+        <?php 
+        // my_wc_cart_count fucntion
+        do_action( 'linh_cart_icon' ); 
+        ?>
+        <!-- <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </a> -->
+        </div>
         
         <!-- <nav>
             <ul>

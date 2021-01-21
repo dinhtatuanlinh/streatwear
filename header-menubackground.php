@@ -60,22 +60,27 @@
         global $CustomizeVal;// gọi biến $DDNCustomize để có thể dùng ở đây
         $background_data = $CustomizeVal->background_data(); // tham số desktop truyền vào để xác định các dữ liệu nằm trên giao diện desktop
         $logo_data = $CustomizeVal->logo_data();
-        // echo '<pre style="color: #fff">';
-        // print_r($logo_data);
-        // echo '</pre>';
+        echo '<pre style="color: #fff">';
+        print_r($background_data);
+        echo '</pre>';
+        
+
     ?>
     <div id="notif">FREE U.S. SHIPPING ON ALL JEWELRY ORDERS</div>
     <div id="background">
     
         <div class="w3-display-container">
-            <img class="imgbackground w3-hide-small w3-hide-medium desktopslider dttlimg_1" src="<?php echo $background_data['img_1']; ?>" alt="bg">
-            <img class="imgbackground w3-hide-small w3-hide-medium desktopslider dttlimg_2" src="<?php echo $background_data['img_2']; ?>" alt="bg">
-            <img class="imgbackground w3-hide-small w3-hide-medium desktopslider dttlimg_3" src="<?php echo $background_data['img_3']; ?>" alt="bg">
+        <?php
+                $i = 1;
+                foreach ($background_data as $key => $value){
+            ?>
+            <a href="<?php echo $background_data['img_1']['link']; ?>"><img class="imgbackground w3-hide-small w3-hide-medium desktopslider dttlimg_<?php echo $i; ?>" src="<?php echo $background_data['img_1']['img']; ?>" alt="bg"></a>
+            <a href="<?php echo $background_data['img_1']['link']; ?>"><img class="imgbackground w3-hide-large mobileslider dttlmbimg_<?php echo $i; ?>" src="<?php echo $background_data['img_1']['mbimg']; ?>" alt="bg"></a>
 
-            <img class="imgbackground w3-hide-large mobileslider dttlmbimg_1" src="<?php echo $background_data['mb_img_1']; ?>" alt="bg">
-            <img class="imgbackground w3-hide-large mobileslider dttlmbimg_2" src="<?php echo $background_data['mb_img_2']; ?>" alt="bg">
-            <img class="imgbackground w3-hide-large mobileslider dttlmbimg_3" src="<?php echo $background_data['mb_img_3']; ?>" alt="bg">
-
+            <?php 
+                $i++;
+                } 
+            ?>
             <button class="w3-button w3-white w3-display-left w3-hide-small w3-hide-medium" onclick="plusDivs(-1)">&#10094;</button>
             <button class="w3-button w3-white w3-display-right w3-hide-small w3-hide-medium" onclick="plusDivs(1)">&#10095;</button>
             <button class="w3-button w3-white w3-display-left w3-hide-large " onclick="mb_plusDivs(-1)">&#10094;</button>
@@ -111,7 +116,13 @@
                                 wp_nav_menu( $args );
                             }
                         ?>
-    <div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> <a href="<?php echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></div>
+    <div class="iconmenu"><a href=""><i class="fa fa-user-o" aria-hidden="true"></i></a> <a href=""><i class="fa fa-search" aria-hidden="true"></i></a> 
+    <?php 
+        // my_wc_cart_count fucntion
+        do_action( 'linh_cart_icon' ); 
+        ?>
+    <!-- <a href="<?php //echo wc_get_cart_url(); ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a> -->
+    </div>
                     </div>
             </div>
             
