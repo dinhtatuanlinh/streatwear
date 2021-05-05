@@ -7,27 +7,27 @@ print_r(get_the_category());
 echo '</pre>';
 ?>
 <div class="wrapper">
-        <div class="cattitle"><?php echo get_the_category()[0]->name; ?></div>
-        <div class="w3-row-padding">
-            <?php
-                if ( have_posts() ) :
-                    while (have_posts()) : the_post();//phải dùng vòng lặp while để lấy ra đúng bài được chọn  
-                    /* get the WC_Product Object */ 
-            ?>
-            <div class="w3-col s12 m4 l4">
-                <a href="<?php the_permalink(); ?>">
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
-                    <div class="infowrapper">
-                        <div class="name"><?php the_title(); ?></div>
-                        
-                    </div>
-                </a>
-            </div>
-            <?php
-                endwhile;
-            ?>
+    <div class="cattitle"><?php echo get_the_category()[0]->name; ?></div>
+    <div class="w3-row-padding">
+        <?php
+            if ( have_posts() ) :
+                while (have_posts()) : the_post();//phải dùng vòng lặp while để lấy ra đúng bài được chọn  
+                /* get the WC_Product Object */ 
+        ?>
+        <div class="w3-col s12 m4 l4">
+            <a href="<?php the_permalink(); ?>">
+                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                <div class="infowrapper">
+                    <div class="name"><?php the_title(); ?></div>
+                    
+                </div>
+            </a>
         </div>
+        <?php
+            endwhile;
+        ?>
     </div>
+</div>
     <?php
         endif;
         wp_reset_postdata();// reset lại đối tương wp_query
